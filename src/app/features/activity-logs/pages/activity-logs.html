@@ -1,0 +1,13 @@
+<div class="activity-container">
+
+  <h1>📊 Activity Logs</h1>
+
+  <div *ngFor="let l of logs" class="log-card">
+
+    <p>{{ l.action }}</p>
+
+    <small>{{ l.createdAt | date }}</small>
+
+  </div>
+
+</div>

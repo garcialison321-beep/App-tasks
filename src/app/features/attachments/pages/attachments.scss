@@ -1,0 +1,44 @@
+.attachments-container {
+  padding: 20px;
+  background: #f7f3ff;
+  min-height: 100vh;
+}
+
+.attachments-container h1 {
+  color: #6a5acd;
+  margin-bottom: 20px;
+}
+
+.attach-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.attach-card p {
+  margin: 0;
+  color: #333;
+}
+
+button {
+  background: #cdb4ff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #b08cff;
+}
+
+input[type="file"] {
+  margin-bottom: 15px;
+}

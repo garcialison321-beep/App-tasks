@@ -1,0 +1,145 @@
+<div class="auth-container">
+
+  <div class="left-side">
+
+    <div class="content">
+
+      <span class="badge">
+        ✔ Organiza tus tareas
+      </span>
+
+      <h1>Tasks</h1>
+
+      <p>
+        Administra tus tareas, pendientes y proyectos
+        de forma rápida, sencilla y organizada.
+      </p>
+
+      <div class="image-container">
+        <img src="https://cdn-icons-png.flaticon.com/512/2620/2620971.png">
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="right-side">
+
+    <div class="auth-box">
+
+      <h2>Bienvenidos 📒</h2>
+
+      <p class="subtitle">
+        Organiza tus actividades académicas y personales.
+      </p>
+
+      <div class="tabs">
+
+        <button
+          [class.active]="isLogin"
+          (click)="isLogin = true">
+
+          Iniciar Sesión
+
+        </button>
+
+        <button
+          [class.active]="!isLogin"
+          (click)="isLogin = false">
+
+          Registrarse
+
+        </button>
+
+      </div>
+
+      <div *ngIf="isLogin">
+
+        <form class="form-container">
+
+          <div class="input-group">
+            <label>Correo</label>
+            <input
+              type="email"
+              [(ngModel)]="loginData.email"
+              name="loginEmail"
+              placeholder="correo@ejemplo.com">
+          </div>
+
+          <div class="input-group">
+            <label>Contraseña</label>
+            <input
+              type="password"
+              [(ngModel)]="loginData.password"
+              name="loginPassword"
+              placeholder="********">
+          </div>
+
+          <button
+            class="btn-primary"
+            type="button"
+            (click)="login()">
+
+            Ingresar ✨
+
+          </button>
+
+        </form>
+
+      </div>
+
+      <div *ngIf="!isLogin">
+
+        <form class="form-container">
+
+          <div class="input-group">
+            <label>Nombre</label>
+            <input
+              [(ngModel)]="registerData.name"
+              name="registerName"
+              placeholder="Tu nombre">
+          </div>
+
+          <div class="input-group">
+            <label>Correo</label>
+            <input
+              type="email"
+              [(ngModel)]="registerData.email"
+              name="registerEmail"
+              placeholder="correo@ejemplo.com">
+          </div>
+
+          <div class="input-group">
+            <label>Contraseña</label>
+            <input
+              type="password"
+              [(ngModel)]="registerData.password"
+              name="registerPassword"
+              placeholder="********">
+          </div>
+
+          <div class="input-group">
+            <label>Confirmar contraseña</label>
+            <input
+              type="password"
+              [(ngModel)]="registerData.confirmPassword"
+              name="registerConfirmPassword"
+              placeholder="********">
+          </div>
+
+          <button
+            class="btn-primary"
+            type="button"
+            (click)="register()">
+
+            Crear Cuenta 💜
+
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>

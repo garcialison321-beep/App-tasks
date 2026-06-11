@@ -1,0 +1,25 @@
+<div class="tags-container">
+
+  <h1>🏷️ Tags</h1>
+
+  <div class="create-tag">
+    <input [(ngModel)]="name" placeholder="Nombre del tag">
+    <input [(ngModel)]="color" placeholder="Color (#hex)">
+    <button (click)="createTag()">Crear</button>
+  </div>
+
+  <div class="tags-list">
+
+    <div class="tag-card" *ngFor="let tag of tags">
+
+      <span>{{ tag.name }}</span>
+
+      <button (click)="deleteTag(tag._id)">
+        Eliminar
+      </button>
+
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,53 @@
+<div class="layout">
+
+  <aside class="sidebar">
+
+    <!-- 🔥 LOGO + IMAGEN -->
+    <div class="logo-section">
+
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/906/906334.png"
+        alt="logo"
+      />
+
+      <h2>📒 Mi App</h2>
+
+    </div>
+
+    <nav>
+
+      <button routerLink="tasks" routerLinkActive="active">
+        📋 Tasks
+      </button>
+
+      <button routerLink="tags" routerLinkActive="active">
+        🏷️ Tags
+      </button>
+
+      <button routerLink="notifications" routerLinkActive="active">
+        🔔 Notificaciones
+      </button>
+
+      <!-- 📎 NUEVO -->
+      <button routerLink="attachments" routerLinkActive="active">
+        📎 Attachments
+      </button>
+
+      <!-- 📊 NUEVO -->
+      <button routerLink="activity-logs" routerLinkActive="active">
+        📊 Activity Logs
+      </button>
+
+    </nav>
+
+    <button class="logout" (click)="logout()">
+      Cerrar sesión
+    </button>
+
+  </aside>
+
+  <main class="content">
+    <router-outlet></router-outlet>
+  </main>
+
+</div>

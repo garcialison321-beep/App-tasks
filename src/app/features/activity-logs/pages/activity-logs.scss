@@ -1,0 +1,28 @@
+.activity-container {
+  padding: 20px;
+  background: #f7f3ff;
+  min-height: 100vh;
+}
+
+.activity-container h1 {
+  color: #6a5acd;
+  margin-bottom: 20px;
+}
+
+.log-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.log-card p {
+  margin: 0;
+  color: #333;
+}
+
+.log-card small {
+  color: #888;
+  font-size: 12px;
+}

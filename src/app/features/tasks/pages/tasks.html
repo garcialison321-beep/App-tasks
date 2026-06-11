@@ -1,0 +1,140 @@
+<div class="tasks-container">
+
+  <header class="topbar">
+
+    <div>
+      <h1>📒 Mis Tareas</h1>
+      <p>Organiza tus actividades de forma sencilla</p>
+    </div>
+
+    <button
+      class="logout-btn"
+      (click)="logout()">
+
+      Cerrar Sesión
+
+    </button>
+
+  </header>
+
+  <section class="stats">
+
+    <div class="card">
+      <h3>{{ tasks.length }}</h3>
+      <span>Total</span>
+    </div>
+
+    <div class="card completed">
+      <h3>{{ completedTasks }}</h3>
+      <span>Completadas</span>
+    </div>
+
+    <div class="card pending">
+      <h3>{{ pendingTasks }}</h3>
+      <span>Pendientes</span>
+    </div>
+
+  </section>
+
+  <section class="new-task">
+
+    <h2>✨ Nueva tarea</h2>
+
+    <input
+      type="text"
+      placeholder="Título de la tarea"
+      [(ngModel)]="title">
+
+    <textarea
+      rows="4"
+      placeholder="Descripción"
+      [(ngModel)]="description">
+    </textarea>
+
+    <button
+      class="add-btn"
+      (click)="addTask()">
+
+      Agregar tarea
+
+    </button>
+
+  </section>
+
+  <section class="tasks-list">
+
+    <h2>📋 Lista de tareas</h2>
+
+    @if(tasks.length === 0){
+
+      <div class="empty-state">
+
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/4076/4076478.png"
+          alt="Sin tareas">
+
+        <p>No tienes tareas creadas todavía</p>
+
+      </div>
+
+    }
+
+    @for(task of tasks; track task._id){
+
+      <div
+        class="task-card"
+        [class.completed]="task.status === 'completed'">
+
+        <div class="task-info">
+
+          <h3>
+            {{ task.title }}
+          </h3>
+
+          <p>
+            {{ task.description }}
+          </p>
+
+          <span class="status">
+
+            {{
+              task.status === 'completed'
+                ? '✅ Completada'
+                : '⏳ Pendiente'
+            }}
+
+          </span>
+
+        </div>
+
+        <div class="task-actions">
+
+          <button
+            class="complete-btn"
+            (click)="toggleTask(task)">
+
+            {{
+              task.status === 'completed'
+                ? 'Deshacer'
+                : 'Completar'
+            }}
+
+          </button>
+
+          <button
+            class="delete-btn"
+            (click)="deleteTask(task._id)">
+
+            Eliminar
+
+          </button>
+
+        </div>
+
+      </div>
+
+    }
+
+  </section>
+
+</div>

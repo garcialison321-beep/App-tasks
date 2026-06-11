@@ -1,0 +1,15 @@
+<div class="attachments-container">
+
+  <h1>📎 Attachments</h1>
+
+  <input type="file" (change)="onFileSelected($event)" />
+
+  <div *ngFor="let a of attachments" class="attach-card">
+
+    <p>{{ a.filename || 'Archivo' }}</p>
+
+    <button (click)="delete(a._id)">Eliminar</button>
+
+  </div>
+
+</div>

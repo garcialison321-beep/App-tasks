@@ -1,0 +1,97 @@
+.tags-container {
+  min-height: 100vh;
+  padding: 30px;
+  background: linear-gradient(135deg, #fce7f3, #ede9fe, #e0e7ff);
+  font-family: 'Poppins', sans-serif;
+  color: #4c1d95;
+}
+
+/* Título */
+.tags-container h1 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+  color: #6d28d9;
+}
+
+/* Crear tag */
+.create-tag {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.create-tag input {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ddd6fe;
+  outline: none;
+  min-width: 180px;
+  background: white;
+  transition: 0.2s;
+}
+
+.create-tag input:focus {
+  border-color: #a78bfa;
+  box-shadow: 0 0 8px #ddd6fe;
+}
+
+.create-tag button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  background: #a78bfa;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.create-tag button:hover {
+  background: #8b5cf6;
+}
+
+/* Lista */
+.tags-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+}
+
+/* Card */
+.tag-card {
+  background: white;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.2s;
+}
+
+.tag-card:hover {
+  transform: translateY(-3px);
+}
+
+/* Texto tag */
+.tag-card span {
+  font-weight: 600;
+  color: #4c1d95;
+}
+
+/* Botón eliminar */
+.tag-card button {
+  background: #fda4af;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  transition: 0.2s;
+}
+
+.tag-card button:hover {
+  background: #fb7185;
+}
